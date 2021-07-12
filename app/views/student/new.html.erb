@@ -1,0 +1,38 @@
+<h1> Student Portal</h1>
+<%= form_for :student, url: student_path do |f| %>
+
+    <p>
+        <strong> <%= f.label :sname %> </strong>
+        <br>
+        <%= f.text_field :sname %>
+        <br>
+        <% @student.errors.full_messages_for(:sname).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <strong> <%= f.label :fname %> </strong>
+        <br>
+        <%= f.text_field :fname %>
+        <br>
+        <% @student.errors.full_messages_for(:fname).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <strong> <%= f.label :Mother Name %> </strong>
+        <br>
+        <%= f.text_area :mname %>
+        <br>
+        <% @article.errors.full_messages_for(:mname).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>
