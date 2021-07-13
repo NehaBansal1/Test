@@ -1,4 +1,4 @@
 Rails.application.routes.draw do
-  root "student#index"
-  resources :student
+  root "students#index"
+  resources :students
 end

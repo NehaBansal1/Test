@@ -1,0 +1,28 @@
+<h1>Show Page</h1>
+
+<p>
+    <strong>Roll Number:</strong>
+    <%= @student.rollnum %>
+</p>
+
+<p>
+    <strong>Student Name:</strong>
+    <%= @student.sname %>
+</p>
+
+<p>
+    <strong>Course:</strong>
+    <%= @student.course %>
+</p>
+
+<p>
+    <strong>Percentage:</strong>
+    <%= @student.percentage %>
+</p>
+
+<p>
+    <strong>Time:</strong>
+    <%= @student.created_at %>
+</p>
+
+<%= link_to 'Back to students List', students_path %>

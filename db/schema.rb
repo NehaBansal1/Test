@@ -13,8 +13,10 @@
 ActiveRecord::Schema.define(version: 2021_07_12_111233) do
 
   create_table "students", force: :cascade do |t|
-    t.string "title"
-    t.text "body"
+    t.text "rollnum"
+    t.text "sname"
+    t.text "course"
+    t.text "percentage"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

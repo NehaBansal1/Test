@@ -1,0 +1,49 @@
+<h1>New Student</h1>
+
+<%= form_for :student, url: students_path do |f| %>
+
+    <p>
+        <strong> <%= f.label :rollnumber %> </strong>
+        <br>
+        <%= f.text_field :rollnum %>
+        <br>
+        <% @student.errors.full_messages_for(:rollnum).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <strong> <%= f.label :name %> </strong>
+        <br>
+        <%= f.text_field :sname %>
+        <br>
+        <% @student.errors.full_messages_for(:sname).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <strong> <%= f.label :course %> </strong>
+        <br>
+        <%= f.text_field :course %>
+        <br>
+        <% @student.errors.full_messages_for(:course).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <strong> <%= f.label :percentage %> </strong>
+        <br>
+        <%= f.text_field :percentage %>
+        <br>
+        <% @student.errors.full_messages_for(:percentage).each do |message| %>
+            <%= message %>
+        <% end %>
+    </p>
+
+    <p>
+        <%= f.submit %>
+    </p>
+
+<% end %>

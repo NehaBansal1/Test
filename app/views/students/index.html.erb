@@ -1,0 +1,40 @@
+<h1>Students List 
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font size="3">
+            <%= link_to 'New Student', new_student_path %> 
+        </font>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <font size="3">Total Students:
+            <%= @student.count %>
+        </font>
+</h1>
+
+<div class="table_index">
+<table border="1">
+    <tr>
+        <th>Roll Number</th>
+        <th>Student Name</th>
+        <th>Course</th>
+        <th>Percentage</th>
+        <th>Time - Created</th>
+        <th colspan='3'>Actions</th>
+    </tr>
+    <% @student.each do |student| %>
+        <tr align="center">
+            <td> <%= student.rollnum %> </td>
+            <td> <%= student.sname %> </td>
+            <td> <%= student.course %> </td>
+            <td> <%= student.percentage %> </td>
+            <td> <%= student.created_at %> </td>
+            <td> <%= link_to 'Show', student_path(student) %> </td>
+            <td> <%= link_to 'Edit', edit_student_path(student) %> </td>
+            <td> <%= link_to 'Destroy', student_path(student),
+            method: :delete,
+            data: {confirm: 'Are you sure?'}  %> </td>
+        </tr>
+    <% end %>
+</table>
+</div>
+
+
+
